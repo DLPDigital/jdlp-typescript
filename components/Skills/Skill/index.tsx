@@ -1,3 +1,4 @@
+import Image from "next/image"
 import React from "react"
 
 import styles from "./Skill.module.scss"
@@ -11,11 +12,16 @@ const Skill: React.FC<Props> = ({ title, icon }) => {
   return (
     <div className={styles.SkillStyle}>
     <h5>{title}</h5>
-    <img
-      src={icon}
-      title={title}
-      alt={icon}
-    />
+    <div className={styles.ImageContainer}>
+      <Image
+        src={icon}
+        title={title}
+        alt={icon}
+        layout="responsive"
+        height="100%"
+        width="100%"
+      />
+    </div>
   </div>
   )
 }
