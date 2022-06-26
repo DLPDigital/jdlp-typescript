@@ -21,8 +21,6 @@ body {
 }
 `
 
-
-
 type Props = {
   experienceContent: ExperienceContent[]
 }
