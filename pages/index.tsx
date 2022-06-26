@@ -26,8 +26,6 @@ type Props = {
 }
 
 const Home: NextPage<Props> = ({ experienceContent }) => {
-  console.log('experienceContent  ', experienceContent[0])
-  console.log('experienceContent  ', typeof experienceContent[0])
   const experienceMarkdown = getMarkdown(experienceContent)
   const orderedExperience = experienceMarkdown.sort(
     (a, b) =>

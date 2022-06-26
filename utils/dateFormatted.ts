@@ -8,10 +8,10 @@ const dateFormatted = (reviewDate: string): string => {
     const truncDate = reviewDate.substring(0, 10);
     const splitDate = truncDate.split('-');
     const reviewYear = splitDate[0];
-    const reviewMonth = monthNames[splitDate[1] - 1];
+    const reviewMonth = monthNames[parseInt(splitDate[1]) - 1];
     let reviewDay = splitDate[2].substring(0, 2);
 
-    if (reviewDay.substring(0, 1) === 0) {
+    if (parseInt(reviewDay.substring(0, 1)) === 0) {
       reviewDay = reviewDay.substring(1, 2);
     }
     returnDate = `${reviewMonth} ${reviewYear}`;
