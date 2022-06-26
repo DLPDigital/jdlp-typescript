@@ -1,0 +1,56 @@
+@import "../../styles/grid";
+@import "../../styles/colours";
+@import "../../styles/spacing";
+@import "../../styles/breakpoints";
+
+.MainSection {
+  display: grid;
+  position: relative;
+  background-color: white;
+
+  @include xs-grid {
+    overflow: hidden;
+    padding: $lh-space-6;
+  }
+
+  @include sm-grid {
+    padding: $lh-space-6 0;
+  }
+
+  @include md-grid {
+    padding: $lh-space-10;
+  }
+
+  @include lg-grid {
+    padding: $lh-space-10;
+  }
+
+  @include xl-grid {
+    padding: $lh-space-10;
+  }
+}
+
+.References {
+  text-align: center;
+  grid-row: 7;
+  grid-column: 1 / 5;
+
+  @include sm {
+    grid-column: 2 / 8;
+  }
+
+  @include md {
+    grid-column: 5 / 12;
+    grid-row: 4;
+  }
+
+  @include lg {
+    grid-column: 5 / 12;
+    grid-row: 4;
+  }
+
+  @include xl {
+    grid-column: 5 / 12;
+    grid-row: 4;
+  }
+}

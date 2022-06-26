@@ -1,0 +1,20 @@
+@import "../../../styles/spacing";
+
+.JobListing {
+  margin: $lh-space-4 0;
+  padding: $lh-space-2 0;
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h3,
+  h4 {
+    margin-bottom: $lh-space-2;
+    margin-top: 0;
+  }
+}
+
+.JobContent {
+  margin-top: $lh-space-3;
+}

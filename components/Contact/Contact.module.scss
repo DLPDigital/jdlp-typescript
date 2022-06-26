@@ -1,0 +1,39 @@
+@import "../../styles/breakpoints";
+
+.ContactPanel {
+  grid-column: 1 / 5;
+  grid-row: 4;
+  text-align: center;
+
+  @include sm {
+    grid-column: 2 / 8;
+  }
+
+  @include min-md {
+    grid-column: 1 / 5;
+    grid-row: 3;
+    text-align: left;
+  }
+}
+
+.ContactPointStyle {
+  margin: 12px 0;
+}
+
+.Where,
+.What {
+  width: 50%;
+  display: inline-block;
+}
+
+.LinkedIn {
+  i {
+    &:before {
+      width: 32px;
+      height: 32px;
+      content: url('/images/linkedin-dark.svg');
+      display: block;
+      margin: 20px auto;
+    }
+  }
+}

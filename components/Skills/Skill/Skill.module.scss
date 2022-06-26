@@ -1,0 +1,20 @@
+
+@import "../../../styles/spacing";
+
+.SkillStyle {
+  text-align: center;
+  width: 160px;
+  margin-bottom: $lh-space-4;
+
+  h5 {
+    height: 40px;
+    margin-bottom: 0;
+    font-size: 0.89rem;
+  }
+
+  img {
+    width: 100%;
+    max-width: 48px;
+    margin: 0 auto;
+  }
+}

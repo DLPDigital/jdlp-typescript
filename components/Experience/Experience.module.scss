@@ -1,0 +1,21 @@
+@import "../../styles/breakpoints";
+
+.ExperienceContainer {
+  grid-column: 1 / 5;
+  grid-row: 6;
+
+  @include sm {
+    grid-column: 2 / 8;
+  }
+
+  @include min-md {
+    grid-column: 5 / 12;
+    grid-row: 3;
+  }
+
+    text-align: center;
+
+    @include min-md {
+      text-align: left;
+    }
+}
