@@ -1,0 +1,120 @@
+@import "misc";
+
+// Size
+// EM - Components / Elements
+$size-hero: 3.25em;
+$size-h1: 2.56875em;
+$size-h2: 2.0275em;
+$size-h3: 1.801875em;
+$size-h4: 1.601875em;
+$size-h5: 1.42375em;
+$size-h6: 1.265625em;
+
+$size-paragraph: 1.125em;
+$size-caption: 1em;
+$size-fineprint: 0.8875em;
+
+// REM - Containers
+$size-hero-rem: 3.25rem;
+$size-h1-rem: 2.56875rem;
+$size-h2-rem: 2.0275rem;
+$size-h3-rem: 1.801875rem;
+$size-h4-rem: 1.601875rem;
+$size-h5-rem: 1.42375rem;
+$size-h6-rem: 1.265625rem;
+
+$size-paragraph-rem: 1.125rem;
+$size-caption-rem: 1rem;
+$size-fineprint-rem: 0.8875rem;
+
+$size-hero-container: $size-hero-rem;
+$size-h1-container: $size-h1-rem;
+$size-h2-container: $size-h2-rem;
+$size-h3-container: $size-h3-rem;
+$size-h4-container: $size-h4-rem;
+$size-h5-container: $size-h5-rem;
+$size-h6-container: $size-h6-rem;
+
+$size-paragraph-container: $size-paragraph-rem;
+$size-caption-container: $size-caption-rem;
+$size-fineprint-container: $size-fineprint-rem;
+
+@mixin hero {
+  font-family: $family-sans-serif;
+  font-size: $size-hero-rem;
+  font-weight: $font-regular;
+  line-height: 3.75rem;
+  letter-spacing: -0.023em;
+}
+
+@mixin header-1 {
+  font-family: $family-sans-serif;
+  font-size: $size-h1;
+  font-weight: $font-bold;
+  line-height: 2.75rem;
+  letter-spacing: -0.017em;
+}
+
+@mixin header-2 {
+  font-family: $family-sans-serif;
+  font-size: $size-h2;
+  font-weight: $font-bold;
+  line-height: 2.5rem;
+  letter-spacing: -0.015em;
+}
+
+@mixin header-3 {
+  font-family: $family-sans-serif;
+  font-size: $size-h3;
+  font-weight: $font-bold;
+  line-height: 2.25rem;
+  letter-spacing: -0.011em;
+}
+
+@mixin header-4 {
+  font-family: $family-sans-serif;
+  font-size: $size-h4;
+  font-weight: $font-bold;
+  line-height: 2rem;
+  letter-spacing: -0.006em;
+}
+
+@mixin header-5 {
+  font-family: $family-sans-serif;
+  font-size: $size-h5;
+  font-weight: $font-bold;
+  line-height: 1.75rem;
+  letter-spacing: -0.003em;
+}
+
+@mixin header-6 {
+  font-family: $family-sans-serif;
+  font-size: $size-h6;
+  font-weight: $font-bold;
+  line-height: 1.5rem;
+  letter-spacing: -0.002em;
+}
+
+@mixin paragraph {
+  font-family: $family-sans-serif;
+  font-size: $size-paragraph;
+  font-weight: $font-regular;
+  line-height: 1.5rem;
+  letter-spacing: 0;
+}
+
+@mixin caption {
+  font-family: $family-sans-serif;
+  font-size: $size-caption;
+  font-weight: $font-regular;
+  line-height: 1.25rem;
+  letter-spacing: 0.002em;
+}
+
+@mixin fineprint {
+  font-family: $family-sans-serif;
+  font-size: $size-fineprint;
+  font-weight: $font-regular;
+  line-height: 1.25rem;
+  letter-spacing: 0.003em;
+}

@@ -1,0 +1,35 @@
+@import "../../styles/grid";
+@import "../../styles/spacing";
+
+.FooterStyles {
+  display: grid;
+  position: relative;
+
+
+  @include xs-grid {
+    padding: 0 $space;
+    overflow: hidden;
+  }
+
+  @include sm-grid {
+    padding: 0 $padding-3;
+  }
+
+  @include md-grid {
+    padding: 0 $padding-3;
+  }
+
+  @include lg-grid {
+    margin-bottom: $padding;
+  }
+
+  @include xl-grid {
+    margin-bottom: $padding;
+  }
+}
+
+.Content {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: $lh-space-8 0;
+}

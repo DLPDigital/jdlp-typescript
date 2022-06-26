@@ -1,0 +1,94 @@
+@import "../../styles/breakpoints";
+@import "../../styles/colours";
+@import "../../styles/spacing";
+@import "../../styles/typography";
+
+.Logo {
+  grid-column:  1 / 5;
+  grid-row: 1;
+  margin: 0 auto;
+  width: 100%;
+
+  .ImageContainer {
+    width: 100%;
+    max-width: 120px;
+    margin: 0 auto;
+
+    @include min-md {
+      max-width: 200px;
+    }
+  }
+
+  @include sm {
+    grid-column: 2 / 8;
+  }
+}
+
+.Header {
+  text-align: center;
+  grid-row: 2;
+  grid-column: 1 / 5;
+  
+  @include sm {
+    grid-column: 2 / 8;
+  }
+
+  @include md {
+    grid-column: 5 / 12;
+    grid-row: 1;
+  }
+
+  @include lg {
+    grid-column: 5 / 12;
+    grid-row: 1;
+  }
+
+  @include xl {
+    grid-column: 5 / 12;
+    grid-row: 1;
+  }
+
+  h1 {
+    @include header-1;
+    font-weight: $font-regular;
+    margin-bottom: $lh-space;
+
+    @include min-md {
+      @include hero;
+      margin-bottom: $lh-space;
+      margin-top: 0;
+    }
+  }
+
+  h2 {
+    @include header-2;
+    margin-bottom: $lh-space-6;
+    margin-top: 0;
+  }
+
+  h3 {
+    @include header-3;
+  }
+}
+
+.Statement {
+  grid-column: 1 / 5;
+  grid-row: 3;
+
+  @include sm {
+    grid-column: 2 / 8;
+  }
+
+  @include max-sm {
+    text-align: center;
+  }
+
+  @include min-md {
+    grid-row: 2;
+    text-align: left;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}

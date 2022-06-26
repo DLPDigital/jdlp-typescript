@@ -1,0 +1,181 @@
+@import "../../styles/breakpoints.scss";
+@import "../../styles/colours.scss";
+@import "../../styles/grid.scss";
+@import "../../styles/spacing.scss";
+
+.NavContainer {
+  display: grid;
+  @include xs-grid {
+    margin-bottom: $lh-space-5;
+  }
+  @include sm-grid {
+    margin-bottom: $lh-space-5;
+  }
+  @include md-grid {
+    margin-bottom: $lh-space-5;
+  }
+  @include lg-grid {
+    margin-bottom: $lh-space-5;
+    padding: 0 $lh-space-10;
+  }
+  @include xl-grid {
+    margin-bottom: $lh-space-5;
+    padding: 0 $lh-space-10;
+  }
+
+  background-color: $jdlp-dark;
+  color: $jdlp-white;
+}
+
+.ActiveNav {
+  height: 400px;
+}
+
+.Logo {
+  grid-column: 1 / 2;
+  
+  .ImageContainer {
+    width: 40px;
+    margin: 20px;
+  }
+
+  @include min-sm {
+    grid-column: 2 / 3;
+   }
+}
+
+.NavItems {
+  grid-column: 2 / 4;
+  grid-row: 1;
+
+  @include min-sm {
+    grid-column: 3 / 7;
+    grid-row: 1;
+  }
+
+  ul {
+    display: none;
+  }
+
+  &.Active {
+    @include max-sm {
+      grid-row: 2;
+      ul {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        list-style: none;
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+
+        li {
+          padding: $lh-space-3 0;
+          transition: all 0.5s ease-in-out;
+          a {
+            text-decoration: none;
+            color: $jdlp-white;
+          }
+          &:hover,
+          &:active {
+            background-color: $jdlp-white;
+            transition: all 0.5s ease-in-out;
+            a {
+              color: $jdlp-dark
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include min-md {
+    grid-column: 6 / 11;
+    margin: 0;
+    padding: 20px 0;
+    ul {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      li {
+        display: inline-block;
+        margin: 0;
+
+        a {
+          text-decoration: none;
+          color: $jdlp-white;
+        }
+      }
+    }
+  }
+}
+
+.NavToggle {
+  grid-column: 4 / 5;
+  grid-row: 1;
+
+  &:focus {
+    outline: none;
+  }
+
+  .Cross {
+    &:before {
+      width: 32px;
+      height: 32px;
+      content: url('/static/staticassets/close.svg');
+      display: block;
+      margin: 20px auto;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .Menu {
+    &:before {
+      width: 32px;
+      height: 32px;
+      content: url('/static/staticassets/menu.svg');
+      display: block;
+      margin: 20px auto;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  @include min-sm {
+    grid-column: 7 / 8;
+   }
+  @include min-md {
+   display: none;
+  } 
+}
+
+.LinkedIn {
+  display: none;
+
+  @include max-sm {
+    &.Active {
+      display: block;
+      grid-row: 3;
+      grid-column: 1 / -1;
+    }
+  }
+  i {
+    &:before {
+      width: 32px;
+      height: 32px;
+      content: url('/images/linkedin-white.svg');
+      display: block;
+      margin: 20px auto;
+    }
+  }
+  @include min-md {
+    grid-column: 11 / 12;
+    grid-row: 1;
+    display: block;
+  }
+}

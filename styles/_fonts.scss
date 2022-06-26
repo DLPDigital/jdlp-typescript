@@ -1,0 +1,29 @@
+@import "misc";
+
+@font-face {
+  font-family: "FSMatthew";
+  src: url("https://assets.localheroes.com/lh-ui/core/fonts/FSMatthewWeb-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: $font-regular;
+}
+
+@font-face {
+  font-family: "FSMatthew";
+  src: url("https://assets.localheroes.com/lh-ui/core/fonts/FSMatthewWeb-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: $font-medium;
+}
+
+@font-face {
+  font-family: "FSMatthew";
+  src: url("https://assets.localheroes.com/lh-ui/core/fonts/FSMatthewWeb-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: $font-bold;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("https://assets.localheroes.com/lh-ui/core/fonts/icomoon.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}

@@ -1,0 +1,72 @@
+@use "sass:math";
+@import "breakpoints";
+
+$space: 16px;
+$space-2: 12px;
+$space-3: 8px;
+$space-4: 6px;
+$space-5: 4px;
+
+$padding: 48px;
+$padding-2: 36px;
+$padding-3: 24px;
+
+$lg-viewport-width: 1236px;
+$xl-viewport-width: 1608px;
+
+$xs-grid-gap: $space;
+$grid-gap: $padding-3;
+
+@mixin xs-grid {
+  @include xs {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $xs-grid-gap;
+    @content;
+  }
+}
+
+@mixin sm-grid {
+  @include sm {
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: $grid-gap;
+    @content;
+  }
+}
+
+@mixin md-grid {
+  @include md {
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $grid-gap;
+    @content;
+  }
+}
+
+@mixin lg-grid {
+  @include lg {
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $grid-gap;
+    width: $lg-viewport-width;
+    margin: 0 auto;
+    @content;
+  }
+}
+
+@mixin xl-grid {
+  @include xl {
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $grid-gap;
+    width: $xl-viewport-width;
+    margin: 0 auto;
+    @content;
+  }
+}
+
+$xs-grid-width: calc((100vw - (#{$xs-grid-gap} * 5)) / 4);
+$sm-grid-width: calc((100vw - (#{$grid-gap} * 9)) / 8);
+$md-grid-width: calc((100vw - (#{$grid-gap} * 13)) / 12);
+$lg-grid-width: calc((#{$lg-viewport-width} - (#{$grid-gap} * 11)) / 12); // 81px
+$xl-grid-width: calc((#{$xl-viewport-width} - (#{$grid-gap} * 11)) / 12); // 112px
+
+@function bubble-size($grid-width, $grid-gap, $grid-span) {
+  @return calc((#{$grid-width} * #{$grid-span}) + (#{$grid-gap} * (#{$grid-span} - 1)));
+}

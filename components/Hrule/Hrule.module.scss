@@ -1,0 +1,12 @@
+@import "../../styles/colours";
+@import "../../styles/spacing";
+
+.HruleStyle {
+  width: 50%;
+  margin: 0 auto;
+  background: $jdlp-highlight;
+  height: 8px;
+  margin-bottom: $lh-space-6;
+  color: $jdlp-highlight;
+  border-width: 0px;
+}
