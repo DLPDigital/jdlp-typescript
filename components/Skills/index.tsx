@@ -33,6 +33,10 @@ const Skills: React.FC = () => {
           title="REACT"
           icon="/images/skills/react.svg"
         />
+        <Skill
+          title="Typescript"
+          icon="/images/skills/typescript.svg"
+        />
       </div>
       <Hrule />
   </div>
