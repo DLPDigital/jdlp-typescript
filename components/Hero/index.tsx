@@ -3,8 +3,15 @@ import Image from "next/image"
 
 import styles from "./Hero.module.scss"
 import Hrule from "../Hrule"
+import { FullPage } from "../../types/cms"
 
-const Hero: React.FC = () => {
+type Props = {
+  title: FullPage["title"]
+  headline: FullPage["headline"]
+  bio: FullPage["bio"]
+}
+
+const Hero: React.FC<Props> = ({ title, headline, bio }) => {
   return (
     <>
       <div className={styles.Logo}>
@@ -20,16 +27,14 @@ const Hero: React.FC = () => {
         </div>
       </div>
       <div className={styles.Header}>
-        <h1>Dominic Ladden&#8209;Powell</h1>
-        <h2>Digital Content Specialist</h2>
+        <h1>{title}</h1>
+        <h2>{headline}</h2>
         <Hrule />
       </div>
       <div className={styles.Statement}>
         <h2>Bio</h2>
         <p>
-          End to end digital content specialist experienced in SEO,
-          content marketing, website development and management, digital
-          strategy and organic growth.
+          {bio}
         </p>
         <Hrule />
       </div>

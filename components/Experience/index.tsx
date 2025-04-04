@@ -1,29 +1,29 @@
 import React from "react"
-import { ExperienceProps } from "../../utils/exportTypes"
 import Hrule from "../Hrule"
 
 import styles from "./Experience.module.scss"
 import JobDetails from "./JobDetails"
+import { FullPage } from "../../types/cms"
 
 type Props = {
-  experienceMarkdown: ExperienceProps[]
+  experiences: FullPage["experience"]
 }
 
-const Experience: React.FC<Props> = ({ experienceMarkdown }) => {
+const Experience: React.FC<Props> = ({ experiences }) => {
+  console.log("Experience", experiences)
   return (
     <div className={styles.ExperienceContainer}>
       <h2 id="experience">Experience</h2>
       {
-        experienceMarkdown.map(({ data, content }) => {
+        experiences.map((experience) => {
           return (
             <JobDetails
-              key={data.title}
-              title={data.title}
-              company={data.company}
-              start={data.start}
-              end={data.end}
-              location={data.location}
-              html={content}
+              key={experience.jobTitle}
+              title={experience.jobTitle}
+              company={experience.company}
+              tenure={experience.tenure}
+              location={experience.location}
+              details={experience.details}
             />
           )
         })
