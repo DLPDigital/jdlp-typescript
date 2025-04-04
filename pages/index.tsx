@@ -1,7 +1,7 @@
 import type { NextPage } from "next"
-import { createClient } from "contentful"
 import Contact from "../components/Contact"
 import Container from "../components/Container"
+import { createClient } from "contentful"
 
 import Hero from "../components/Hero"
 import Skills from "../components/Skills"
@@ -14,11 +14,11 @@ import { FullPage } from "../types/cms"
 
 const css = `
 body {
-  margin: 0
-  background-color: ${jdlpHighlight}
-  color: ${jdlpDark}
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
+  margin: 0;
+  background-color: ${jdlpHighlight};
+  color: ${jdlpDark};
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 `
 
