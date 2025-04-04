@@ -1,13 +1,9 @@
 ---
-title: Head of SEO
+title: Technical SEO & Frontend Developer
 company: BEAUTY PIE
 start: "2021-01-26"
 end: Present
 location: London
 ---
 
-<p>Leading technical search strategy for digital only industry leading consumer cosmetics and skincare brand. Managing migration from legacy site to CWV optimised NextJS custom platform.</p>
-
-<p>Migrated 6,000+ cannibalising URLs to fewer than 500 optimised landing pages across UK and US markets with consolidated, best practice architecture to improve rankings, boost backlink profile and repair internal linking.</p>
-
-<p>Currently leading rebuild of content marketing platform, front-end technical optimisations and backlink building PR campaigns. I manage stakeholder and agency relationships, and work across growth and product teams.</p>
+<p>Built scalable, high-performance web applications using Test Driven modern frameworks including Next.js, TypeScript and React. Integrated headless CMS platform within existing and new processes. Maintained responsibility for search and Core Web Vitals optimised and accessible pages.</p><p>Responsible for refactoring large portions of existing web app into server-side rendering, package-based component library for improved data consumption and load speed. Worked closely with product, design and UX teams, and across marketing functions. Led technical search strategy.</p>
