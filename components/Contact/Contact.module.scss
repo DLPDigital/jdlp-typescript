@@ -37,3 +37,15 @@
     }
   }
 }
+
+.GitHub {
+  i {
+    &:before {
+      width: 32px;
+      height: 32px;
+      content: url('/images/github.svg');
+      display: block;
+      margin: 20px auto;
+    }
+  }
+}

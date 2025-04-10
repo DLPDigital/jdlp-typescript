@@ -17,6 +17,22 @@ const Contact: React.FC = () => {
     </div>
     <div className={styles.ContactPointStyle}>
       <div className={styles.Where}>
+        GitHub:
+      </div>
+      <div className={styles.What}>
+        <a
+          href="https://github.com/DLPDigital"
+          title="View on GitHub"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.GitHub}
+        >
+          <i />
+        </a>
+      </div>
+    </div>
+    <div className={styles.ContactPointStyle}>
+      <div className={styles.Where}>
         LinkedIn:
       </div>
       <div className={styles.What}>
