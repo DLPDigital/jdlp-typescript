@@ -1,14 +1,21 @@
+import Script from 'next/script'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { GoogleAnalytics, usePagesViews } from "nextjs-google-analytics"
 
 function MyApp({ Component, pageProps }: AppProps) {
-  usePagesViews()
   return (
-    <>
-      <GoogleAnalytics />
+    <html lang="en">
+      {/* eslint-disable-next-line @next/next/no-head-element */}
+      <head>
+      <Script
+          src="https://scripts.withcabin.com/hello.js"
+          strategy="afterInteractive"
+        />
+      </head>
+      <body>
       <Component {...pageProps} />
-    </>
+      </body>
+    </html>
   )
 }
 
